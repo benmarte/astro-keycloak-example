@@ -2,6 +2,10 @@
 
 This is a simple setup of Astro, Keycloak and Docker Compose for local development.
 
+Here is a quick video of the whole process.
+
+https://github.com/benmarte/astro-keycloak-example/assets/693275/3189e372-ecd1-4b45-8b43-9321ae9fb5b3
+
 ## Prerequisites
 
 - Docker
@@ -68,5 +72,3 @@ Once the user is created we need to create a password. Click on the `Credentials
 ![Create Realm](./public/10.png)
 
 You should now be able to login to the astro app using the username and password you just created in keycloak.
-
-Here is a quick video of the whole process.
