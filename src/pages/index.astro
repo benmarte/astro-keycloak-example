@@ -1,0 +1,14 @@
+---
+import { getSession } from "auth-astro/server";
+const session = await getSession(Astro.request);
+import { SignIn, SignOut } from "auth-astro/components";
+
+console.log(session);
+---
+
+<>
+  <h1>Keycloak Astro Example</h1>
+  <SignIn provider="keycloak">Sign In</SignIn>
+  <SignOut>Sing Out</SignOut>
+  {session && <pre>{JSON.stringify(session)}</pre>}
+</>
