@@ -16,8 +16,12 @@ export default defineConfig({
         },
         url: `${process.env.AUTH_KEYCLOAK_ISSUER}/protocol/openid-connect/auth`,
       },
-      token: `${process.env.AUTH_KEYCLOAK_DOCKER_URL}/protocol/openid-connect/token`,
-      userinfo: `${process.env.AUTH_KEYCLOAK_DOCKER_URL}/protocol/openid-connect/userinfo`,
+      token: `${
+        process.env.AUTH_KEYCLOAK_DOCKER_URL || process.env.AUTH_KEYCLOAK_ISSUER
+      }/protocol/openid-connect/token`,
+      userinfo: `${
+        process.env.AUTH_KEYCLOAK_DOCKER_URL || process.env.AUTH_KEYCLOAK_ISSUER
+      }/protocol/openid-connect/userinfo`,
     }),
   ],
 });
